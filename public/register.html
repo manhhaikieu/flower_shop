@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Flower Shop - free website template, HTML CSS</title>
+<title>Flower Shop - Register</title>
 <meta name="keywords" content="free website template, flower shop, website templates, CSS, HTML" />
 <meta name="description" content="Flower Shop - free website template, W3C compliant HTML CSS layout" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -19,7 +19,7 @@
             <a href="#"><img src="images/templatemo_flag_05.gif" alt="flag 5" /></a>
         </div>
         <div id="templatemo_shopping_cart">
-       	    Shopping Cart <span>(<a href="#">3 items</a>)</span>      
+       	    Shopping Cart <span>(<a href="#">0 items</a>)</span>      
         </div>
   </div>
      
@@ -32,48 +32,50 @@
      
 <div id="templatemo_menu_panel">
         <ul>
-            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="http://www.templatemo.com" target="_parent">Features</a></li>
             <li><a href="http://www.templatemo.com/page/1" target="_parent">Gallery</a></li>
             <li><a href="http://www.templatemo.com/page/2" target="_parent">Templates</a></li>  
             <li><a href="#">About Us</a></li> 
             <li><a href="#">Contact Us</a></li>
-            <li><a href="register.html">Register</a></li>                     
+            <li><a href="register.html" class="current">Register</a></li>
         </ul> 
     </div> <!-- end of menu -->
     
     <div id="templatemo_content">
     
     	<div id="templatemo_content_left">
-        	<h1>Welcome to Our Flower Site</h1>
-            <p>This is a <a href="http://www.templatemo.com" target="_parent">free CSS template</a> provided by TemplateMo.com website. You may download, modify and apply this CSS layout for your personal or business websites. Credit goes to <a href="http://www.publicdomainpictures.net/" target="_blank">PublicDomainPictures</a> for photos.</p>
-          <p>Aliquam tristique lacus in sapien. Suspendisse potenti. Ut sed pede. Nullam vitae tellus. Sed ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc quis sem nec tellus blandit tincidunt. Aliquam tristique lacus in sapien. Suspendisse potenti. Ut sed pede. Nullam vitae tellus. Sed ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        
-             <div class="cleaner_with_height">&nbsp;</div>
-             
-             <h2>New Products</h2>
-             <div class="product_box">
-             	<h3>Product One</h3>
-                <img src="images/templatemo_image_01.jpg" alt="image" />
-                <p>Aliquam tristique lacus in sapien. Suspendisse potenti.</p>
-                <div class="price">PRICE:<span>$14.00</span></div>                           
-             	<div class="buynow"><a href="shoppingcard.html">Buy Now</a></div><a href="#">Details</a>
-             </div>
-             <div class="product_box">
-             	<h3>Product Title</h3>
-                <img src="images/templatemo_image_02.jpg" alt="image" />
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
-                <div class="price">PRICE:<span>$18.00</span></div>                           
-             	<div class="buynow"><a href="shoppingcard.html">Buy Now</a></div><a href="#">Details</a>
-             </div>
-             <div class="product_box">
-             	<h3>Product Title</h3>
-                <img src="images/templatemo_image_03.jpg" alt="image" />
-                <p>Suspendisse potenti. Ut sed pede. Nullam vitae tellus. </p>
-                <div class="price">PRICE:<span>$26.00</span></div>                           
-             	<div class="buynow"><a href="shoppingcard.html">Buy Now</a></div><a href="#">Details</a>
-             </div>
-             
+        	<h1>Register an Account</h1>
+            <p>Please fill out the form below to create a new account.</p>
+            
+            <div style="margin-top: 20px; padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                <form action="/register" method="POST">
+                    <div style="margin-bottom: 15px;">
+                        <label for="fullname" style="display: block; font-weight: bold; margin-bottom: 5px;">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required />
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">Username:</label>
+                        <input type="text" id="username" name="username" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required />
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px;">Email Address:</label>
+                        <input type="email" id="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required />
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password:</label>
+                        <input type="password" id="password" name="password" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required />
+                    </div>
+                    
+                    <div>
+                        <input type="submit" value="Register Now" class="button" style="padding: 10px 20px; cursor: pointer; font-size: 14px; font-weight: bold;" />
+                    </div>
+                </form>
+            </div>
+               
 			<div class="cleaner_with_height">&nbsp;</div>
         </div> <!-- end of ocntent left -->
         
