@@ -16,6 +16,12 @@ app.post('/register', (req, res) => {
     res.send('<h2>Registration successful!</h2><p><a href="/">Go back to Home</a></p>');
 });
 
+// Handle login form submission
+app.post('/login', (req, res) => {
+    console.log('Login request received:', req.body);
+    res.send('<h2>Login successful!</h2><p><a href="/">Go back to Home</a></p>');
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
