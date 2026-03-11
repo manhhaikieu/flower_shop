@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Flower Shop</title>
+    <link rel="stylesheet" href="templatemo_style.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .login-header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff69b4;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #ff1493;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-footer a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            color: #666;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            color: #ff69b4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>🌸 Đăng Nhập</h1>
+            <p>Chào mừng bạn trở lại</p>
+        </div>
+
+        <form id="loginForm" action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email hoặc Tên đăng nhập</label>
+                <input type="text" id="email" name="email" required placeholder="Nhập email của bạn">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+            </div>
+
+            <div class="forgot-password">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Đăng Nhập</button>
+        </form>
+
+        <div class="login-footer">
+            <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+            <p><a href="index.html">← Quay lại trang chủ</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Gửi request đến server
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Đăng nhập thành công!');
+                        window.location.href = 'index.html';
+                    } else {
+                        alert('Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Có lỗi xảy ra. Vui lòng thử lại!');
+                });
+        });
+    </script>
+</body>
+
+</html>
