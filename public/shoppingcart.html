@@ -2,31 +2,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Flower Shop - Gallery</title>
+<title>Flower Shop - Shopping Cart</title>
 <meta name="keywords" content="free website template, flower shop, website templates, CSS, HTML" />
 <meta name="description" content="Flower Shop - free website template, W3C compliant HTML CSS layout" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 <!--  Free CSS Template | Designed by TemplateMo.com  -->
 <style>
-    .gallery_box {
-        float: left;
-        width: 150px;
-        margin: 0 15px 15px 0;
-        text-align: center;
-        border: 1px solid #ccc;
-        padding: 5px;
-        background: #f9f9f9;
-        transition: transform 0.2s;
+    .cart_table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
     }
-    .gallery_box:hover {
-        transform: scale(1.05);
-        border-color: #999;
+    .cart_table th, .cart_table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
     }
-    .gallery_box img {
-        width: 140px;
-        height: 140px;
+    .cart_table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    .cart_table img {
+        width: 50px;
+        height: 50px;
         object-fit: cover;
-        margin-bottom: 5px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .cart_total {
+        text-align: right;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
     }
 </style>
 </head>
@@ -41,7 +48,7 @@
             <a href="#"><img src="images/templatemo_flag_05.gif" alt="flag 5" /></a>
         </div>
         <div id="templatemo_shopping_cart">
-            Shopping Cart <span>(<a href="shoppingcart.html">0 items</a>)</span>      
+            Shopping Cart <span>(<a href="shoppingcart.html">3 items</a>)</span>      
         </div>
   </div>
      
@@ -56,7 +63,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="http://www.templatemo.com" target="_parent">Features</a></li>
-            <li><a href="gallery.html" class="current">Gallery</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="http://www.templatemo.com/page/2" target="_parent">Templates</a></li>  
             <li><a href="#">About Us</a></li> 
             <li><a href="login.html">Login</a></li>
@@ -67,37 +74,60 @@
     <div id="templatemo_content">
     
         <div id="templatemo_content_left">
-            <h1>Our Flower Collection</h1>
-            <p>Browse through our beautiful selection of flowers.</p>
+            <h1>Your Shopping Cart</h1>
+            <p>Review the items in your cart before proceeding to checkout.</p>
             
-            <div style="margin-top: 20px;">
-                <div class="gallery_box">
-                    <img src="images/templatemo_image_01.jpg" alt="Gallery Image 1" />
-                    <strong>Red Rose</strong>
-                </div>
-                <div class="gallery_box">
-                    <img src="images/templatemo_image_02.jpg" alt="Gallery Image 2" />
-                    <strong>Purple Blossom</strong>
-                </div>
-                <div class="gallery_box">
-                    <img src="images/templatemo_image_03.jpg" alt="Gallery Image 3" />
-                    <strong>Pink Bouquet</strong>
-                </div>
-                <!-- Reusing images for demonstration -->
-                <div class="gallery_box">
-                    <img src="images/templatemo_image_01.jpg" alt="Gallery Image 4" />
-                    <strong>Classic Red</strong>
-                </div>
-                <div class="gallery_box">
-                    <img src="images/templatemo_image_02.jpg" alt="Gallery Image 5" />
-                    <strong>Lavender</strong>
-                </div>
-                <div class="gallery_box">
-                    <img src="images/templatemo_image_03.jpg" alt="Gallery Image 6" />
-                    <strong>Mixed Pink</strong>
-                </div>
-                
-                <div class="cleaner">&nbsp;</div>
+            <table class="cart_table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="images/templatemo_image_01.jpg" alt="Product 1" />
+                            Product One
+                        </td>
+                        <td>1</td>
+                        <td>$14.00</td>
+                        <td>$14.00</td>
+                        <td><a href="#" style="color: red;">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/templatemo_image_02.jpg" alt="Product 2" />
+                            Product Two
+                        </td>
+                        <td>2</td>
+                        <td>$18.00</td>
+                        <td>$36.00</td>
+                        <td><a href="#" style="color: red;">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/templatemo_image_03.jpg" alt="Product 3" />
+                            Product Three
+                        </td>
+                        <td>1</td>
+                        <td>$26.00</td>
+                        <td>$26.00</td>
+                        <td><a href="#" style="color: red;">Remove</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="cart_total">
+                Subtotal: $76.00
+            </div>
+            
+            <div style="text-align: right; margin-top: 20px;">
+                <a href="index.html" class="button" style="text-decoration: none; padding: 10px 15px; background: #ddd; color: #333; margin-right: 10px;">Continue Shopping</a>
+                <a href="#" class="button" style="text-decoration: none; padding: 10px 15px;">Checkout</a>
             </div>
                
             <div class="cleaner_with_height">&nbsp;</div>
