@@ -2,11 +2,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Flower Shop - Login</title>
+<title>Flower Shop - Gallery</title>
 <meta name="keywords" content="free website template, flower shop, website templates, CSS, HTML" />
 <meta name="description" content="Flower Shop - free website template, W3C compliant HTML CSS layout" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 <!--  Free CSS Template | Designed by TemplateMo.com  -->
+<style>
+    .gallery_box {
+        float: left;
+        width: 150px;
+        margin: 0 15px 15px 0;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 5px;
+        background: #f9f9f9;
+        transition: transform 0.2s;
+    }
+    .gallery_box:hover {
+        transform: scale(1.05);
+        border-color: #999;
+    }
+    .gallery_box img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+</style>
 </head>
 <body>
 <div id="templatemo_container">
@@ -34,10 +56,10 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="http://www.templatemo.com" target="_parent">Features</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html" class="current">Gallery</a></li>
             <li><a href="http://www.templatemo.com/page/2" target="_parent">Templates</a></li>  
             <li><a href="#">About Us</a></li> 
-            <li><a href="login.html" class="current">Login</a></li>
+            <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Register</a></li>
         </ul> 
     </div> <!-- end of menu -->
@@ -45,26 +67,37 @@
     <div id="templatemo_content">
     
         <div id="templatemo_content_left">
-            <h1>Login to Your Account</h1>
-            <p>Please enter your credentials to login.</p>
+            <h1>Our Flower Collection</h1>
+            <p>Browse through our beautiful selection of flowers.</p>
             
-            <div style="margin-top: 20px; padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd;">
-                <form action="/login" method="POST">
-                    
-                    <div style="margin-bottom: 15px;">
-                        <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">Username:</label>
-                        <input type="text" id="username" name="username" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required />
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password:</label>
-                        <input type="password" id="password" name="password" style="width: 100%; padding: 8px; border: 1px solid #ccc;" required />
-                    </div>
-                    
-                    <div>
-                        <input type="submit" value="Login" class="button" style="padding: 10px 20px; cursor: pointer; font-size: 14px; font-weight: bold;" />
-                    </div>
-                </form>
+            <div style="margin-top: 20px;">
+                <div class="gallery_box">
+                    <img src="images/templatemo_image_01.jpg" alt="Gallery Image 1" />
+                    <strong>Red Rose</strong>
+                </div>
+                <div class="gallery_box">
+                    <img src="images/templatemo_image_02.jpg" alt="Gallery Image 2" />
+                    <strong>Purple Blossom</strong>
+                </div>
+                <div class="gallery_box">
+                    <img src="images/templatemo_image_03.jpg" alt="Gallery Image 3" />
+                    <strong>Pink Bouquet</strong>
+                </div>
+                <!-- Reusing images for demonstration -->
+                <div class="gallery_box">
+                    <img src="images/templatemo_image_01.jpg" alt="Gallery Image 4" />
+                    <strong>Classic Red</strong>
+                </div>
+                <div class="gallery_box">
+                    <img src="images/templatemo_image_02.jpg" alt="Gallery Image 5" />
+                    <strong>Lavender</strong>
+                </div>
+                <div class="gallery_box">
+                    <img src="images/templatemo_image_03.jpg" alt="Gallery Image 6" />
+                    <strong>Mixed Pink</strong>
+                </div>
+                
+                <div class="cleaner">&nbsp;</div>
             </div>
                
             <div class="cleaner_with_height">&nbsp;</div>
