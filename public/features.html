@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ & Tính Năng - Flower Shop</title>
+    <link rel="stylesheet" href="templatemo_style.css">
+    <style>
+        body {
+            background: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: #ff69b4;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .services-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateX(10px);
+        }
+
+        .service-icon {
+            font-size: 30px;
+            min-width: 40px;
+        }
+
+        .service-content h4 {
+            color: #333;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+
+        .service-content p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .why-choose-section {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .why-text {
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 0 10px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #ff69b4;
+        }
+
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #ff69b4;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-home a {
+            color: #ff69b4;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-choose-section {
+                padding: 30px 20px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="features-container">
+        <div class="page-header">
+            <h1>🌺 Dịch Vụ & Tính Năng Nổi Bật</h1>
+            <p>Mang đến trải nghiệm tuyệt vời cho mọi khách hàng</p>
+        </div>
+
+        <!-- Main Features -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🌸</span>
+                <h3>Hoa Tươi 100%</h3>
+                <p>Cam kết cung cấp hoa tươi nhập khẩu và trong nước, đảm bảo chất lượng cao nhất. Mỗi bông hoa được
+                    chọn lọc kỹ càng.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🚚</span>
+                <h3>Giao Hàng Nhanh</h3>
+                <p>Giao hàng trong vòng 2 giờ nội thành. Miễn phí giao hàng cho đơn từ 500.000đ. Đảm bảo hoa tươi khi
+                    đến tay bạn.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎨</span>
+                <h3>Thiết Kế Độc Đáo</h3>
+                <p>Đội ngũ florist chuyên nghiệp, sáng tạo. Thiết kế theo yêu cầu riêng của bạn. Phong cách hiện đại và
+                    tinh tế.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">💰</span>
+                <h3>Giá Cả Hợp Lý</h3>
+                <p>Giá cả cạnh tranh, nhiều chương trình khuyến mãi. Tích điểm thành viên ưu đãi. Minh bạch, không phí
+                    phát sinh.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">💳</span>
+                <h3>Thanh Toán Linh Hoạt</h3>
+                <p>Hỗ trợ đa dạng phương thức thanh toán: tiền mặt, chuyển khoản, thẻ, ví điện tử. An toàn và bảo mật.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎁</span>
+                <h3>Quà Tặng Kèm Theo</h3>
+                <p>Thiệp chúc mừng miễn phí. Gấu bông, socola, quà tặng cao cấp. Gói quà sang trọng, chuyên nghiệp.</p>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services-section">
+            <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-icon">💐</div>
+                    <div class="service-content">
+                        <h4>Hoa Sinh Nhật</h4>
+                        <p>Bó hoa tươi đẹp cho ngày sinh nhật đặc biệt</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">💒</div>
+                    <div class="service-content">
+                        <h4>Hoa Cưới</h4>
+                        <p>Trang trí tiệc cưới, hoa cầm tay cô dâu</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🌹</div>
+                    <div class="service-content">
+                        <h4>Hoa Tình Yêu</h4>
+                        <p>Hoa hồng, hoa tỏ tình lãng mạn</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🎓</div>
+                    <div class="service-content">
+                        <h4>Hoa Tốt Nghiệp</h4>
+                        <p>Kỷ niệm ngày tốt nghiệp ý nghĩa</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🏢</div>
+                    <div class="service-content">
+                        <h4>Hoa Khai Trương</h4>
+                        <p>Kệ hoa, lẵng hoa chúc mừng khai trương</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🕯️</div>
+                    <div class="service-content">
+                        <h4>Hoa Chia Buồn</h4>
+                        <p>Vòng hoa, kệ hoa tang lễ trang trọng</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🏠</div>
+                    <div class="service-content">
+                        <h4>Hoa Trang Trí</h4>
+                        <p>Trang trí nội thất, sự kiện, văn phòng</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">📅</div>
+                    <div class="service-content">
+                        <h4>Đặt Hoa Định Kỳ</h4>
+                        <p>Gói hoa hàng tuần, hàng tháng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose-section">
+            <h2 class="section-title">Tại Sao Chọn Chúng Tôi</h2>
+            <div class="why-choose-grid">
+                <div class="why-item">
+                    <div class="why-number">10+</div>
+                    <div class="why-text">Năm Kinh Nghiệm</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">50K+</div>
+                    <div class="why-text">Khách Hàng Hài Lòng</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">500+</div>
+                    <div class="why-text">Mẫu Hoa Đa Dạng</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">24/7</div>
+                    <div class="why-text">Hỗ Trợ Khách Hàng</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Sẵn Sàng Đặt Hoa?</h2>
+            <p>Hãy để chúng tôi giúp bạn tạo nên những khoảnh khắc đáng nhớ</p>
+            <a href="index.html" class="btn-primary">Đặt Hoa Ngay</a>
+            <a href="contact.html" class="btn-secondary">Liên Hệ Tư Vấn</a>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html">← Quay lại trang chủ</a>
+        </div>
+    </div>
+
+    <script>
+        // Animate on scroll
+        window.addEventListener('scroll', function () {
+            const cards = document.querySelectorAll('.feature-card, .service-item');
+
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (cardTop < windowHeight - 50) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.feature-card, .service-item');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Về Chúng Tôi - Flower Shop</title>
+    <link rel="stylesheet" href="templatemo_style.css">
+    <style>
+        body {
+            background: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: #ff69b4;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #ffe0f0 0%, #ffc0e0 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .mission-vision-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .mission-card,
+        .vision-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-card h3,
+        .vision-card h3 {
+            color: #ff69b4;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mission-card p,
+        .vision-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .values-section {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .values-section h2 {
+            color: #333;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .value-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .value-item h4 {
+            color: #ff69b4;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .value-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .team-section h2 {
+            color: #333;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .team-name {
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            color: #ff69b4;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .team-bio {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .contact-cta {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .contact-cta h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .contact-cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 15px 50px;
+            background: white;
+            color: #ff69b4;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-home a {
+            color: #ff69b4;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .about-content,
+            .mission-vision-section {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section,
+            .values-section,
+            .team-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>🌸 Về Chúng Tôi</h1>
+            <p>Chúng tôi là cửa hàng hoa uy tín, mang đến những bó hoa tươi đẹp và chất lượng nhất cho mọi dịp đặc biệt
+                trong cuộc sống của bạn</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Câu Chuyện Của Chúng Tôi</h2>
+                    <p>
+                        <strong>Flower Shop</strong> được thành lập vào năm 2016 với niềm đam mê về hoa tươi và mong
+                        muốn mang lại niềm vui cho mọi người qua những bó hoa tươi đẹp.
+                    </p>
+                    <p>
+                        Với hơn 10 năm kinh nghiệm trong ngành, chúng tôi tự hào là địa chỉ tin cậy của hàng nghìn khách
+                        hàng trên toàn quốc. Mỗi bó hoa được chúng tôi chăm sóc và thiết kế tỉ mỉ là một câu chuyện, một
+                        thông điệp yêu thương.
+                    </p>
+                    <p>
+                        Chúng tôi không chỉ bán hoa, mà còn mang đến những khoảnh khắc đáng nhớ, những nụ cười hạnh phúc
+                        và những tình cảm chan hòa.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        🌷🌹💐
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Năm Kinh Nghiệm</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">😊</div>
+                <div class="stat-number">50,000+</div>
+                <div class="stat-label">Khách Hàng Hài Lòng</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💐</div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Mẫu Hoa Đa Dạng</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-number">4.9/5</div>
+                <div class="stat-label">Đánh Giá Trung Bình</div>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="mission-vision-section">
+            <div class="mission-card">
+                <h3><span>🎯</span> Sứ Mệnh</h3>
+                <p>
+                    Mang đến cho khách hàng những sản phẩm hoa tươi chất lượng cao nhất với giá cả hợp lý. Chúng tôi cam
+                    kết luôn đổi mới, sáng tạo và đặt sự hài lòng của khách hàng lên hàng đầu.
+                </p>
+                <p>
+                    Tạo ra những trải nghiệm mua sắm tuyệt vời, giúp mọi người thể hiện tình cảm và chia sẻ niềm vui qua
+                    những bó hoa ý nghĩa.
+                </p>
+            </div>
+
+            <div class="vision-card">
+                <h3><span>🔭</span> Tầm Nhìn</h3>
+                <p>
+                    Trở thành chuỗi cửa hàng hoa hàng đầu Việt Nam, được biết đến với chất lượng sản phẩm vượt trội và
+                    dịch vụ khách hàng xuất sắc.
+                </p>
+                <p>
+                    Mở rộng hệ thống cửa hàng trên toàn quốc, phát triển nền tảng công nghệ hiện đại, và góp phần lan
+                    tỏa vẻ đẹp của hoa đến mọi gia đình Việt.
+                </p>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="values-section">
+            <h2>Giá Trị Cốt Lõi</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">💎</div>
+                    <h4>Chất Lượng</h4>
+                    <p>Cam kết 100% hoa tươi nhập khẩu và trong nước chất lượng cao</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">❤️</div>
+                    <h4>Tận Tâm</h4>
+                    <p>Phục vụ khách hàng bằng cả trái tim và sự chuyên nghiệp</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">🎨</div>
+                    <h4>Sáng Tạo</h4>
+                    <p>Thiết kế độc đáo, cập nhật xu hướng mới nhất</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h4>Uy Tín</h4>
+                    <p>Minh bạch, trung thực trong mọi giao dịch</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">⚡</div>
+                    <h4>Nhanh Chóng</h4>
+                    <p>Giao hàng đúng giờ, xử lý đơn hàng nhanh gọn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2>Đội Ngũ Của Chúng Tôi</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar">👨‍💼</div>
+                    <div class="team-name">Nguyễn Văn A</div>
+                    <div class="team-role">Giám Đốc Điều Hành</div>
+                    <div class="team-bio">10 năm kinh nghiệm trong ngành hoa tươi</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-avatar">👩‍🎨</div>
+                    <div class="team-name">Trần Thị B</div>
+                    <div class="team-role">Trưởng Phòng Thiết Kế</div>
+                    <div class="team-bio">Chuyên gia florist với nhiều giải thưởng</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-avatar">👨‍💻</div>
+                    <div class="team-name">Lê Văn C</div>
+                    <div class="team-role">Quản Lý Vận Hành</div>
+                    <div class="team-bio">Đảm bảo quy trình giao hàng hoàn hảo</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-avatar">👩‍💼</div>
+                    <div class="team-name">Phạm Thị D</div>
+                    <div class="team-role">Trưởng Phòng Khách Hàng</div>
+                    <div class="team-bio">Tận tâm chăm sóc từng khách hàng</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="contact-cta">
+            <h2>Liên Hệ Với Chúng Tôi</h2>
+            <p>Bạn muốn biết thêm thông tin hoặc cần tư vấn?</p>
+            <a href="contact.html" class="btn-contact">Liên Hệ Ngay</a>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html">← Quay lại trang chủ</a>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            const sections = document.querySelectorAll('.stat-card, .mission-card, .vision-card, .value-item, .team-member');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
